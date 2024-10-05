@@ -13,11 +13,14 @@ const Hero = () => {
         <div className="md:col-span-6 flex items-center justify-center p-8 xl:p-16">
           <div className="flex flex-col gap-8">
             <h1 className="text-5xl xl:text-7xl font-bold xl:leading-[7.5rem]">
-              Lorem ipsum dolor sit amet.
+              Conoce nuestra agencia
             </h1>
-            <p className="text-gray-500 text-2xl leading-[2.5rem]">
-              Lorem, ipsum dolor.
+            <p className=" text-primary text-2xl font-bold leading-[2.5rem]">
+              Registrate para contar con nuestra ayuda
             </p>
+            <button className="mt-4 w-full bg-primary text-white py-2 px-4 rounded-lg hover:bg-secundary">
+              Registrate
+            </button>
           </div>
         </div>
       </section>

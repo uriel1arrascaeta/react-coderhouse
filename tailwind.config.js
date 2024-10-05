@@ -7,6 +7,7 @@ export default {
       colors:{
         primary :"#520d80",
         secundary:"#790f99",
+        footer: "#350953",
       },
     },
   },

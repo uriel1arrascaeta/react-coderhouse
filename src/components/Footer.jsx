@@ -1,10 +1,14 @@
+import { Link } from "react-router-dom";
+
 function Footer() {
   return (
     <footer className="bg-footer text-white py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h2 className="text-white text-3xl font-bold mb-4">Samther</h2>
+            <Link to="/" className="text-white text-3xl font-bold mb-4">
+              S H I N R Y U
+            </Link>
             <p className="text-white">Cuidamos de tu empresa</p>
           </div>
 
@@ -37,8 +41,8 @@ function Footer() {
             <h3 className="text-white text-xl font-semibold mb-4">
               Contáctanos
             </h3>
-            <p className="text-white">Email: asdfghjk@gmaill.com</p>
-            <p className="text-white">Teléfono: +123 456 789</p>
+            <p className="text-white">Email: shinryu.agency@gmail.com</p>
+            <p className="text-white">Teléfono: +54 9 351 875-5243</p>
 
             <div className="flex space-x-4 mt-4">
               <a
@@ -55,7 +59,7 @@ function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.instagram.com/__heberarrascaeta__/"
+                href="https://www.instagram.com/shinryu_agency/"
                 className="text-white"
                 target="_blank"
               >
@@ -86,7 +90,7 @@ function Footer() {
 
         <div className="border-t border-gray-700 mt-10 pt-6">
           <p className="text-center text-gray-500">
-            © 2024 Samther. Todos los derechos reservados.
+            © 2024 S H I N R Y U. Todos los derechos reservados.
           </p>
         </div>
       </div>

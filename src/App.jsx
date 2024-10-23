@@ -20,9 +20,11 @@ function App() {
               <>
                 <Header />
                 <Portfolio />
+                <NewsLetter />
               </>
             }
           />
+          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/cursos" element={<Cursos />} />
           <Route path="/contacto" element={<NewsLetter />} />
         </Routes>

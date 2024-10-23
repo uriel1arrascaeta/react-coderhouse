@@ -1,4 +1,12 @@
+import { useForm } from "react-hook-form";
+
 const NewsLetter = () => {
+  const { register, handleSubmit } = useForm();
+
+  const enviar = (data) => {
+    console.log(data);
+  };
+
   return (
     <>
       <div className="max-w-lg mx-auto bg-white shadow-md rounded-lg p-8 mt-16 mb-16">
@@ -10,7 +18,7 @@ const NewsLetter = () => {
           correo.
         </p>
 
-        <form className="space-y-6">
+        <form className="space-y-6" onSubmit={handleSubmit(enviar)}>
           <div>
             <label
               htmlFor="name"
@@ -24,6 +32,7 @@ const NewsLetter = () => {
               name="name"
               placeholder="Tu nombre"
               className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              {...register("nombre")}
             />
           </div>
 
@@ -40,10 +49,10 @@ const NewsLetter = () => {
               name="email"
               placeholder="tucorreo@ejemplo.com"
               className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              {...register("email")}
             />
           </div>
 
-          {/* Botón de envío */}
           <div>
             <button
               type="submit"

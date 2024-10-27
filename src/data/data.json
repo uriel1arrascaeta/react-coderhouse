@@ -1,0 +1,18 @@
+[
+        {
+        "id": 1,
+        "titulo": "Plano Inicial",
+        "descripcion": "Dale click a conocer mas"
+        
+    },
+    {
+        "id": 2,
+        "titulo": "Plano Profecional",
+        "descripcion": "Dale click a conocer mas"
+    },
+    {
+        "id": 3,
+        "titulo": "Plano Premium",
+        "descripcion": "Dale click a conocer mas"
+    }
+]

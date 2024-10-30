@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Cursos from "./components/Cursos";
 import NewsLetter from "./components/NewsLetter";
-
+import ItemDetailContainer from "./components/ItemDetailContainer";
 function App() {
   return (
     <>
@@ -29,6 +29,7 @@ function App() {
           <Route path="/contacto" element={<NewsLetter />} />
         </Routes>
         <Footer />
+        <ItemDetailContainer itemId={2} />
       </BrowserRouter>
     </>
   );

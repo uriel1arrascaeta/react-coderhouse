@@ -7,7 +7,9 @@ export const pedirDatos = () => {
                 resolve(data); 
             }, 500);
         } else {
-            reject('No se encontro el producto'); 
+            reject({
+                error: "no se encontro el produc"
+            }); 
         }
     });
 }
@@ -18,7 +20,9 @@ export const pedirItemPorId =  (id) => {
         if (item){
             resolve (item)
         }else {
-            reject('No se encontro el product'); 
+            reject({
+                error: "no se encontro el produc"
+            }); 
         }
     })
 }

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { pedirItemPorId } from "../helpers/pedirDatos";
 import ItemDetail from "./ItemDetail";
 
-const ItemDetailContainer = ({ itemId }) => {
+export const ItemDetailContainer = ({ itemId }) => {
   const [item, setItem] = useState(null);
 
   useEffect(() => {
@@ -16,11 +16,9 @@ const ItemDetailContainer = ({ itemId }) => {
     return <p>No se encontró el item</p>;
   }
 
-  return <div>{item && <ItemDetail item={item} />}</div>;
+  return <>{item && <ItemDetail item={item} />}</>;
 };
 
 ItemDetailContainer.propTypes = {
   itemId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
-
-export default ItemDetailContainer;

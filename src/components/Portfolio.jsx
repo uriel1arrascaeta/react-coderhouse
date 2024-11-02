@@ -1,4 +1,4 @@
-function Portfolio() {
+export function Portfolio() {
   const services = [
     {
       title: "Plano Inicial",
@@ -73,5 +73,3 @@ function Portfolio() {
     </>
   );
 }
-
-export default Portfolio;

@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 
-const NewsLetter = () => {
+export const NewsLetter = () => {
   const { register, handleSubmit } = useForm();
 
   const enviar = (data) => {
@@ -11,10 +11,10 @@ const NewsLetter = () => {
     <>
       <div className="max-w-lg mx-auto bg-white shadow-md rounded-lg p-8 mt-16 mb-16">
         <h2 className="text-3xl font-bold text-center mb-6 text-gray-900">
-          Únete a Nuestra NewsLetter
+          Unite a nuestra NewsLetter
         </h2>
         <p className="text-center text-gray-600 mb-6">
-          Recibe las últimas noticias y actualizaciones directamente en tu
+          Recibí las últimas noticias y actualizaciones directamente en tu
           correo.
         </p>
 
@@ -66,5 +66,3 @@ const NewsLetter = () => {
     </>
   );
 };
-
-export default NewsLetter;

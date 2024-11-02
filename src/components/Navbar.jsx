@@ -4,7 +4,7 @@ import { IoClose } from "react-icons/io5";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+export const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <>
@@ -22,7 +22,7 @@ const Navbar = () => {
         >
           <Link to="/">Inicio</Link>
           <Link to="/cursos">Cursos</Link>
-          <Link to="/portfolio">Servicios</Link>
+          <Link to="/">Servicios</Link>
           <Link to="/contacto">Contacto</Link>
         </nav>
         <button
@@ -35,5 +35,3 @@ const Navbar = () => {
     </>
   );
 };
-
-export default Navbar;

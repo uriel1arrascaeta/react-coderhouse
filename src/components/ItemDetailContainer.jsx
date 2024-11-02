@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
-import PropTypes from "prop-types";
 import { pedirItemPorId } from "../helpers/pedirDatos";
 import ItemDetail from "./ItemDetail";
+import { useParams } from "react-router-dom";
 
-export const ItemDetailContainer = ({ itemId }) => {
+export const ItemDetailContainer = () => {
   const [item, setItem] = useState(null);
+  const { id } = useParams(); // Obtiene el id de los parámetros de la URL
 
   useEffect(() => {
-    pedirItemPorId(itemId).then((res) => {
+    pedirItemPorId(Number(id)).then((res) => {
       setItem(res);
     });
-  }, [itemId]);
+  }, [id]);
 
   if (!item) {
     return <p>No se encontró el item</p>;
@@ -19,6 +20,4 @@ export const ItemDetailContainer = ({ itemId }) => {
   return <>{item && <ItemDetail item={item} />}</>;
 };
 
-ItemDetailContainer.propTypes = {
-  itemId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-};
+export default ItemDetailContainer;

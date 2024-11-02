@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-export const Item = ({ productos }) => {
+const Item = ({ productos }) => {
   return (
     <>
       <div className="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
@@ -13,9 +14,11 @@ export const Item = ({ productos }) => {
         <p className="text-xl font-semibold text-gray-900 mb-4 text-center">
           ${productos.precio}
         </p>
-        <button className="mt-auto w-full bg-primary text-white py-2 rounded-lg hover:bg-secundary">
-          Ver Detalles
-        </button>
+        <Link to={`/item/${productos.id}`}>
+          <button className="mt-auto w-full bg-primary text-white py-2 rounded-lg hover:bg-secundary">
+            Ver Detalles
+          </button>
+        </Link>
       </div>
     </>
   );
@@ -29,3 +32,5 @@ Item.propTypes = {
     precio: PropTypes.number.isRequired,
   }).isRequired,
 };
+
+export default Item;

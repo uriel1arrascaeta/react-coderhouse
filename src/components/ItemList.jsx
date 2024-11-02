@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import { Item } from "./Item";
+import Item from "./Item";
 
-export const ItemList = ({ productos }) => {
+const ItemList = ({ productos }) => {
   return (
     <>
       <div className="bg-gray-100 py-12">
@@ -32,3 +32,5 @@ ItemList.propTypes = {
     })
   ).isRequired,
 };
+
+export default ItemList;

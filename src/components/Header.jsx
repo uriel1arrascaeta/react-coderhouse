@@ -1,4 +1,4 @@
-export const Hero = () => {
+const Hero = () => {
   return (
     <>
       <section className="min-h-[90vh] grid grid-cols-1 md:grid-cols-9 ">
@@ -27,3 +27,5 @@ export const Hero = () => {
     </>
   );
 };
+
+export default Hero;

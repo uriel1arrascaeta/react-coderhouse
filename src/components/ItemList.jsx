@@ -27,8 +27,9 @@ const ItemList = ({ productos }) => {
 ItemList.propTypes = {
   productos: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
       titulo: PropTypes.string.isRequired,
+      precio: PropTypes.number.isRequired,
     })
   ).isRequired,
 };

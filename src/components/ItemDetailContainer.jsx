@@ -11,7 +11,12 @@ export const ItemDetailContainer = () => {
   useEffect(() => {
     const docRef = doc(db, "productos", id);
     getDoc(docRef).then((resp) => {
-      console.log(resp);
+      if (resp.exists()) {
+        setItem({ id: resp.id, ...resp.data() });
+      } else {
+        console.error("No se encontró el documento");
+        setItem(null);
+      }
     });
   }, [id]);
 

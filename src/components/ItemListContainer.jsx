@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase/config";
+
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
 
@@ -10,10 +11,10 @@ const ItemListContainer = () => {
 
     getDocs(productosRef).then((resp) => {
       setProductos(
-        resp.docs.map((doc) => {
-          const data = doc.data();
-          return { ...data, id: Number(doc.id) };
-        })
+        resp.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }))
       );
     });
   }, []);

@@ -26,7 +26,7 @@ const Item = ({ productos }) => {
 
 Item.propTypes = {
   productos: PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     titulo: PropTypes.string.isRequired,
     descripcion: PropTypes.string,
     precio: PropTypes.number.isRequired,

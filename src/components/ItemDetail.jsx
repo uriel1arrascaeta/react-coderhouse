@@ -1,10 +1,14 @@
 import PropTypes from "prop-types";
 import ItemCount from "./ItemCount";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { CartContext } from "./CartContext";
 
 const ItemDetail = ({ item }) => {
   const [cantidad, setCantidad] = useState(1);
   const stockDisponible = item.stock || 0;
+
+  const { carrito, handleAgregar } = useContext(CartContext);
+  console.log(carrito);
 
   const handleRestar = () => {
     if (cantidad > 1) {
@@ -17,6 +21,7 @@ const ItemDetail = ({ item }) => {
       setCantidad(cantidad + 1);
     }
   };
+
   return (
     <div className="max-w-4xl mx-auto my-8 p-6 bg-white rounded-lg shadow-md">
       <div className="flex flex-col lg:flex-row items-center">
@@ -37,6 +42,9 @@ const ItemDetail = ({ item }) => {
             cantidad={cantidad}
             handleRestar={handleRestar}
             handleSumar={handleSumar}
+            handleAgregar={() => {
+              handleAgregar(item, cantidad);
+            }}
           />
         </div>
       </div>

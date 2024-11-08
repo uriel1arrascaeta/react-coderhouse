@@ -4,7 +4,7 @@
         "titulo": "Plano Inicial",
         "descripcion": "Dale click a conocer mas",
         "precio": 1500,
-        "stock": 2
+        "stock": 10
         
     },
     {
@@ -12,34 +12,34 @@
         "titulo": "Plano Profecional",
         "descripcion": "Dale click a conocer mas",
         "precio": 1800,
-        "stock": 2
+        "stock": 10
     },
     {
         "id": 3,
         "titulo": "Plano Premium",
         "descripcion": "Dale click a conocer mas",
         "precio": 1900,
-        "stock": 2
+        "stock": 10
     },
     {
         "id": 4,
         "titulo": "Plano Premium",
         "descripcion": "Dale click a conocer mas",
         "precio": 1900,
-        "stock": 2
+        "stock": 10
     },
     {
         "id": 5,
         "titulo": "Plano Premium",
         "descripcion": "Dale click a conocer mas",
         "precio": 1900,
-        "stock": 2
+        "stock": 10
     },{
         "id": 6,
         "titulo": "Plano Premium",
         "descripcion": "Dale click a conocer mas",
         "precio": 1900,
-        "stock": 2
+        "stock": 10
     }
 
 ]

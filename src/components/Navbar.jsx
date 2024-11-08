@@ -3,6 +3,7 @@ import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import CartWidget from "./CartWidget";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -27,6 +28,8 @@ const Navbar = () => {
             Sobre Nosotros
           </Link>
           <Link to="/contacto">Contacto</Link>
+          <Link to="/carrito">Carrito</Link>
+          <CartWidget />
         </nav>
         <button
           onClick={() => setShowMenu(!showMenu)}
